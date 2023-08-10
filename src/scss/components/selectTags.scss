@@ -1,0 +1,77 @@
+@import "../variables";
+
+.select-tag-popUp {
+  position: absolute;
+
+  padding: 1rem;
+
+  width: 10rem;
+  height: 8rem;
+  background-color: white;
+
+  border-radius: 1rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  bottom: 4rem;
+  left: 4rem;
+}
+
+.type-tag {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  & input {
+    width: 7rem;
+    height: 1.5rem;
+    border: 1px solid $yellow;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.empty-error {
+  bottom: 1.8rem;
+  position: absolute;
+  color: red;
+  font-size: 0.8rem;
+  display: inline;
+}
+.select-tag-color {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    scale: 1.2;
+  }
+}
+
+.git-picker {
+  left: 8rem;
+  top: 0.5rem;
+}
+.selectTag-btns-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.selectTag-cancel-btn {
+  color: $black;
+  font-weight: 400;
+  font-size: 1rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.selectTag-ok-btn {
+  color: $yellow;
+  font-weight: 400;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0rem 2rem;
+  cursor: pointer;
+}

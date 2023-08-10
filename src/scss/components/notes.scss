@@ -1,0 +1,94 @@
+.all-notes {
+  margin: 0rem 8rem;
+
+  display: flex;
+
+  justify-content: space-start;
+
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 0.5rem 1rem;
+  width: 13rem;
+  height: 16rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  &:hover > .deleteEditIcon_delete__x5a8X {
+    display: block;
+  }
+  &:hover > .deleteEditIcon_edit__Xljuj {
+    display: block;
+  }
+}
+.wrapper {
+  height: 14rem;
+}
+
+.note-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.note-tag {
+  margin-right: 1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+.note-title {
+  color: $black;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.note-body {
+  color: $gray;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.create-date {
+  align-self: center;
+
+  color: $gray;
+  font-size: 0.8rem;
+  top: 5rem;
+}
+
+@media (max-width: 1045px) {
+  .all-notes {
+    margin: 0rem 4rem;
+  }
+}
+
+@media (max-width: 910px) {
+  .all-notes {
+    margin: 0rem 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .all-notes {
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+}

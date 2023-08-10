@@ -1,0 +1,24 @@
+@import "../../scss/variables";
+.delete,
+.edit {
+  width: 1.5rem;
+  height: auto;
+  position: absolute;
+  bottom: 1rem;
+  display: none;
+  cursor: pointer;
+  &:hover path {
+    stroke: $yellow;
+  }
+}
+
+.edit {
+  right: 0;
+
+  width: 1.3rem;
+  height: auto;
+  margin-right: 1rem;
+  &:hover polygon {
+    stroke: $yellow;
+  }
+}

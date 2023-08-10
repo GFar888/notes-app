@@ -1,0 +1,123 @@
+@import "../variables";
+
+.tags {
+  display: flex;
+
+  padding: 0.3rem 0rem;
+  padding-left: 0;
+  align-items: center;
+  margin: 5rem 0rem;
+  gap: 1rem;
+  width: 70%;
+  scroll-behavior: smooth;
+
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 0.5rem;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $yellow;
+  }
+}
+
+.tag {
+  display: flex;
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 5rem;
+  color: $gray;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 3px -1px;
+  list-style: none;
+
+  cursor: pointer;
+}
+.filterTag {
+  width: 1.1rem;
+  height: 1.1rem;
+
+  border-radius: 50%;
+}
+.tag-all {
+  cursor: pointer;
+  text-align: center;
+  height: 2rem;
+  width: 2rem;
+  list-style: none;
+  background-color: white;
+  border-radius: 50%;
+  color: $gray;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 3px -1px;
+}
+.active {
+  background-color: $yellow;
+  color: white;
+}
+
+.tags-button-wrapper {
+  margin: 0rem 8rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // position: sticky;
+  // top: 8rem;
+  // z-index: 5;
+}
+
+.add-note {
+  padding: 0.5rem 1.5rem;
+  margin-left: 1rem;
+  border-radius: 3rem;
+  background-color: $yellow;
+  color: white;
+  user-select: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 3px -1px;
+  cursor: pointer;
+  &:active {
+    background-color: #c3980c;
+  }
+}
+
+@media (max-width: 1045px) {
+  .tags-button-wrapper {
+    margin: 0rem 4rem;
+  }
+}
+
+@media (max-width: 910px) {
+  .tags-button-wrapper {
+    margin: 0rem 2rem;
+  }
+}
+
+@media (max-width: 733px) {
+  .tags-button-wrapper {
+    margin: -3rem 2rem;
+  }
+  .add-note {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 100;
+  }
+  .tags {
+    width: 100%;
+  }
+}
+
+@media (max-width: 439px) {
+  .tags-button-wrapper {
+    justify-content: center;
+  }
+}
