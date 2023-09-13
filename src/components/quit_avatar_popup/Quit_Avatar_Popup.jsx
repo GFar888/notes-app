@@ -25,6 +25,7 @@ const Quit_Avatar_Popup = () => {
 
   const logOut = () => {
     signOut(auth);
+    localStorage.removeItem("user");
     navigate("/");
   };
 

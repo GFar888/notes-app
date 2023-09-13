@@ -32,6 +32,7 @@ const Login = () => {
       .then(() => {
         // Signed in
         setShowSpinner(false);
+        localStorage.setItem("user", JSON.stringify(auth.currentUser));
         navigate("/home");
       })
       .catch((error) => {
